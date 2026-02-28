@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://gradient-machine.github.io/simplexii/'
 languageCode = 'en-us'
 title = 'Notes and Thoughts'
 theme = 'ananke'
@@ -6,3 +6,18 @@ theme = 'ananke'
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[params]
+  custom_css = ["css/custom.css"]
+
+  background_color_class = "bg-blue"
+
+  # mw7 is default (~768px). 
+  # mw8 is ~1024px, mw9 is ~1536px.
+  # "center" keeps it aligned in the middle.
+  body_classes = "mw9 center"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      passthrough = { enable = true, delimiters = { block = [['$$', '$$']], inline = [['$', '$']] } }

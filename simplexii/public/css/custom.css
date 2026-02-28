@@ -1,0 +1,43 @@
+/* Force the body text to pure black */
+body, .near-black, .mid-gray {
+    color: #000000 !important;
+}
+
+/* Ensure article content and headings are also pure black */
+article, p, li, h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+}
+
+/* Optional: Make links a slightly different black or your chosen blue */
+.link {
+    transition: color .15s ease-in;
+}
+
+/* Overrides the Tachyons max-width 7 (48rem) to something larger */
+.mw7 {
+    max-width: 80rem !important; /* This is roughly 1280px */
+}
+
+/* Ensure the nested content also expands */
+.nested-copy-line-height {
+    max-width: 100% !important;
+}
+
+/* 1. Remove the minimum height constraint on the homepage header */
+.cover {
+    min-height: auto !important;
+}
+
+/* 2. Match the padding of the homepage header to the post headers */
+/* Ananke usually uses pv4 or pv5 for home and pv3 for posts */
+.page-header.cover {
+    padding-top: 2rem !important;    /* Adjust based on your preference */
+    padding-bottom: 2rem !important; /* Adjust based on your preference */
+}
+
+/* 3. Adjust the heading size to match if necessary */
+.cover h1 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    font-size: 2.25rem !important; /* Standard f2 size in Tachyons */
+}
