@@ -1,0 +1,3 @@
+[submodule "simplexii/themes/ananke"]
+	path = simplexii/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
