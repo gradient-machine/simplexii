@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://gradient-machine.github.io/simplexii/'
 languageCode = 'en-us'
 title = 'Notes and Thoughts'
 theme = 'ananke'
