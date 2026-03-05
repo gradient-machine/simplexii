@@ -1,1 +1,11 @@
 {{ partial "math.html" . }}
+
+{{/* Use 'with' to safely check if the resource exists in 'assets/' */}}
+{{ with resources.Get "css/custom.css" }}
+  {{/* Transform and optimize only if the file is found */}}
+  {{ $style := . | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ else }}
+  {{/* Logs a warning to your console instead of crashing the site */}}
+  {{ warnf "CSS file not found in assets/css/custom-styles.css" }}
+{{ end }}

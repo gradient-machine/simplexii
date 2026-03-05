@@ -1,0 +1,80 @@
+/* Target the Site Title in the Hero */
+.cover h1.f1, 
+.cover h2.f2,
+.cover .fw1 {
+    color: #ffffff !important; /* Pure Black */
+    text-shadow: none !important; /* Removes the white glow effect */
+    opacity: 1 !important; /* Overrides Tachyons transparency like white-80 */
+}
+
+/* Target the Subtitle/Description in the Hero */
+.cover .f4, 
+.cover .f5,
+.cover .white-80 {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* If you have a background overlay (the dark tint), make it transparent 
+   so the black text is readable on the blue/white background */
+.bg-black-60, 
+.bg-black-40, 
+.bg-black-10 {
+    background-color: transparent !important;
+}
+
+/* Force the body text to pure black */
+body, .near-black, .mid-gray {
+    color: #000000 !important;
+}
+
+/* Ensure article content and headings are also pure black */
+article, p, li, h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+}
+
+/* Optional: Make links a slightly different black or your chosen blue */
+.link {
+    transition: color .15s ease-in;
+}
+
+/* Overrides the Tachyons max-width 7 (48rem) to something larger */
+.mw7 {
+    max-width: 80rem !important; /* This is roughly 1280px */
+}
+
+/* Ensure the nested content also expands */
+.nested-copy-line-height {
+    max-width: 100% !important;
+}
+
+/* Styling for inline code snippets (`) */
+code {  
+  background-color: #202222; /* Light grey background */
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Styling for inline LaTeX math ($) rendered by KaTeX */
+/* .katex { */
+  /* background-color: #9fcde2; Slightly lighter grey */
+  /* padding: 2px 4px; */
+  /* border-radius: 3px; */
+/* } */
+
+/* Targets <code> tags that are NOT children of a <pre> block */
+:not(pre) > code {
+  background-color: #ffeded; /* Light grey */
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  color: #d63384; /* Optional color contrast */
+}
+
+/* Targets KaTeX math, but excludes it if it's inside a display block */
+.katex:not(.katex-display *) {
+  background-color: #e4fde2; /* Very light grey */
+  padding: 2px 4px;
+  border-radius: 3px;
+}
