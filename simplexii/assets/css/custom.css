@@ -78,3 +78,17 @@ code {
   padding: 2px 4px;
   border-radius: 3px;
 }
+
+/* Center the figure container and its contents */
+.centered-figure {
+  display: table;         /* Ensures the figure only takes up the width of the image */
+  margin-left: auto;      /* Centers the block in its container */
+  margin-right: auto;
+  text-align: center;    /* Centers the caption and title text */
+}
+
+/* Ensure the image itself is centered if the container is wider */
+.centered-figure img {
+  display: block;
+  margin: 0 auto;
+}

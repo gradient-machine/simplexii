@@ -1,0 +1,64 @@
+
+{{/* =================================================================
+   This single template works for ANY image passed to it.
+   Usage: {{< img-resize src="filename.jpg" width="600x" >}}
+   =================================================================== */}}
+
+{{/*  {{ $src := .Get "src" }}
+{{ $width := .Get "width" | default "600x" }}
+
+{{ $image := .Page.Resources.GetMatch $src }}
+
+{{ if $image }}
+  {{ $scaled := $image.Resize $width }}
+  <img src="{{ $scaled.RelPermalink }}" width="{{ $scaled.Width }}" height="{{ $scaled.Height }}" alt="{{ .Get "alt" }}">
+{{ else }}
+  {{ warnf "Image %q not found in page bundle" $src }}
+{{ end }}  */}}
+
+
+{{/* =================================================================
+   This changes the image size by %
+   =================================================================== */}}
+
+{{/*  {{ $src := .Get "src" }}  */}}
+{{/*  {{ $display_width := .Get "display_width" | default "100%" }}  */}}
+
+{{/*  {{ $image := .Page.Resources.GetMatch $src }}  */}}
+
+{{/*  {{ if $image }}  */}}
+  {{/* Physically resize to a high-quality 1200px wide master file */}}
+  {{/*  {{ $scaled := $image.Resize "1200x" }}  */}}
+    {{/*  <img src="{{ $scaled.RelPermalink }}" width="{{ $display_width }}" height="auto" alt="{{ .Get "alt" }}">  */}}
+{{/*  {{ end }}  */}}
+
+
+{{/* =================================================================
+   Keep title and caption
+   =================================================================== */}}
+{{ $src := .Get "src" }}
+{{ $display_width := .Get "display_width" | default "100%" }} 
+{{ $title := .Get "title" }}
+{{ $caption := .Get "caption" }}
+
+{{ $image := .Page.Resources.GetMatch $src }}
+
+{{ if $image }}
+  {{/* Physically resize the image using Hugo Pipes */}}
+  {{ $scaled := $image.Resize "1200x" }}
+  
+  <figure class="centered-figure">
+    <img src="{{ $scaled.RelPermalink }}" 
+         width="{{ $display_width }}" 
+         height="auto"
+         alt="{{ .Get "alt" | default $title }}">    
+    {{ if or $title $caption }}
+      <figcaption>
+        {{ if $title }}<h4>{{ $title }}</h4>{{ end }}
+        {{ if $caption }}<p>{{ $caption }}</p>{{ end }}
+      </figcaption>
+    {{ end }}
+  </figure>
+{{ else }}
+  {{ warnf "Image %q not found in page bundle" $src }}
+{{ end }}

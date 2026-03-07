@@ -1,0 +1,7 @@
+{{/* 
+   Wraps math in a div with a unique ID for cross-referencing.
+   Usage: {{< equation id="eq-1" >}} $$ LaTeX $$ {{< /equation >}}
+*/}}
+<div id="{{ .Get "id" }}" class="math-block">
+  {{ .Inner | markdownify }}
+</div>
