@@ -1,6 +1,6 @@
 +++
 date = '2026-03-07T15:18:45Z'
-draft = true
+draft = false
 title = 'Reformulation Techniques in Optimization'
 +++
 
