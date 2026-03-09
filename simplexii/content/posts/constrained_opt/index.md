@@ -116,8 +116,7 @@ It is worth noting that
 > 2. The condition is independent of the form of $f(x)$ and $c_i(x)$,
 > 3. The condition only states the parallelization of the two gradients, not identical direction,
 > 4. Although $c_i(x)$ is usually considered for $x$ where $c_i(x) = 0$, $c_i(x)$ itself is also a function in the same as $f(x)$ does. If $x \in \mathbb{R}^2$, $c_i(x)$ is still a function in $\mathbb{R}^3$ as $f(x)$ does. Therefore, when analyzing $\nabla_x c_i(x)$, e.g. in the particular case of $x \in \mathbb{R}^2$, the arrow drawn in the plane of $\mathbb{R^2}$ reflects the direction of the fastest increase of the value of $c_i(x)$ in $\mathbb{R}^3$,
-
-$\mathcal{A}(x)$ is not mentioned in this case because $\mathcal{E} \ne \varnothing, \mathcal{I} = \varnothing$, which results in $\mathcal{A}(x) = \mathcal{E}, \forall x \in \Omega$.
+> 5. $\mathcal{A}(x)$ is not mentioned in this case because $\mathcal{E} \ne \varnothing, \mathcal{I} = \varnothing$, which results in $\mathcal{A}(x) = \mathcal{E}, \forall x \in \Omega$.
 
 ### 2. A single inequality constraint
 
