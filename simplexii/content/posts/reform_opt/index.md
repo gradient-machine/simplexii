@@ -10,7 +10,7 @@ In some optimization problems, the objective function or the constraint function
 
 ## Examples
 
-#### 1. The reformulation of a non-smooth objective function
+### 1. The reformulation of a non-smooth objective function
 
 $$
 \min f(x) = \min(\max\{x, x^2\})
@@ -20,14 +20,14 @@ can be reformulated as
 
 $$
 \begin{aligned}
-\min t, &\quad \text{s.t. } \quad t \ge f_1(x), t \ge f_2(x), \\
-\text{where} &\quad f_1(x) = x, f_2(x) = x^2.
+\min t, &\quad \text{s.t. } \quad c_1(x) \le t, c_2(x) \le t, \\
+\text{where} &\quad c_1(x) = x, c_2(x) = x^2.
 \end{aligned}
 $$
 
-> `Is` $t$ `a function of` $x$`?`
-
-Note that $\min f(x) = \min(\max\{x, x^2\}) \neq \left\| y \right\|_\infty$, where $y=[x, x^2]$, because $\left\| y \right\|_\infty=\max\{|x|, |x^2|\}$.
+> 1. `Is` $t$ `a function of` $x$`?`
+> 2. The components of the objective function in the original formulation become the constraint functions in the reformulation, and these constraint functions are compared `not with a constant`, but `with the new objective function` directly.
+> 3. Note that $\min f(x) = \min(\max\{x, x^2\}) \neq \left\| y \right\|_\infty$, where $y=[x, x^2]$, because $\left\| y \right\|_\infty=\max\{|x|, |x^2|\}$.
 
 <!-- $$
 \begin{equation}
@@ -40,7 +40,7 @@ t & \ge x^2
 \end{equation}
 $$ -->
 
-#### 2. The reformulation of a non-smooth constraint function
+### 2. The reformulation of a non-smooth constraint function
 
 $$
 \left\| x \right\|_1 = |x_1| + |x_2| \le 1, \quad \text{where } x = [x_1, x_2]
